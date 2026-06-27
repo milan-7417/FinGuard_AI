@@ -44,21 +44,21 @@ FinGuard AI is an end-to-end deep learning application designed to detect fraudu
 
 ## Landing Page
 
-(screenshots/Screenshot%20(217).png)
+![alt text](screenshots/Screenshot%20(217).png)
 
-(screenshots/Screenshot%20(218).png)
+![alt text](screenshots/Screenshot%20(218).png)
 
 ## Dashboard
 
-(screenshots/Screenshot%20(219)-1.png)
+![alt text](screenshots/Screenshot%20(219)-1.png)
 
-(screenshots/Screenshot%20(220).png)
+![alt text](screenshots/Screenshot%20(220).png)
 
 ## Prediction & Analytics Dashboard
 
-(screenshots/Screenshot%20(221).png)
+![alt text](screenshots/Screenshot%20(221).png)
 
-(screenshots/Screenshot%20(222).png)
+![alt text](screenshots/Screenshot%20(222).png)
 
 ---
 
