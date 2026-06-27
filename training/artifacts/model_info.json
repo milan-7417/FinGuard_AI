@@ -1,0 +1,17 @@
+{
+    "model_name": "CNN + BiLSTM",
+    "epochs": 18,
+    "batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "input_shape": [
+        69256,
+        11,
+        1
+    ],
+    "loss": 0.06434150785207748,
+    "accuracy": 0.9706140756607056,
+    "precision": 0.7262921333312988,
+    "recall": 0.9835666418075562,
+    "auc": 0.9967187643051147
+}

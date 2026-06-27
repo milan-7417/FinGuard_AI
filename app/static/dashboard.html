@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FinGuard AI Dashboard</title>
+
+    <link rel="stylesheet"
+          href="/static/css/dashboard.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>
+
+            🛡 FinGuard AI Dashboard
+
+        </h1>
+
+        <p>
+
+            AI Powered Financial Fraud Detection
+
+        </p>
+
+    </header>
+    
+    <div class="mode-buttons">
+
+    <button id="manualBtn" class="active">
+
+        Manual Prediction
+
+    </button>
+
+    <button id="csvBtn">
+
+        CSV Upload
+
+    </button>
+
+</div>
+
+    <div class="card" id="manualSection">
+
+        <h2>
+
+            Transaction Details
+
+        </h2>
+
+        <form id="predictionForm">
+
+            <div class="grid">
+
+                <input
+                    type="number"
+                    id="step"
+                    placeholder="Step"
+                    required>
+
+                <select id="type">
+
+                    <option>TRANSFER</option>
+
+                    <option>CASH_OUT</option>
+
+                    <option>PAYMENT</option>
+
+                    <option>DEBIT</option>
+
+                    <option>CASH_IN</option>
+
+                </select>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    required>
+
+                <input
+                    type="number"
+                    id="oldbalanceOrg"
+                    placeholder="Old Origin Balance"
+                    required>
+
+                <input
+                    type="number"
+                    id="newbalanceOrig"
+                    placeholder="New Origin Balance"
+                    required>
+
+                <input
+                    type="number"
+                    id="oldbalanceDest"
+                    placeholder="Old Destination Balance"
+                    required>
+
+                <input
+                    type="number"
+                    id="newbalanceDest"
+                    placeholder="New Destination Balance"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="predict-btn">
+
+                Predict Transaction
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- ==========================================
+CSV Upload
+========================================== -->
+
+<div class="card" id="csvSection">
+    <h2>
+
+        Batch Prediction (CSV)
+
+    </h2>
+
+    <input
+
+        type="file"
+
+        id="csvFile"
+
+        accept=".csv"
+
+    >
+
+    <button
+
+        id="uploadBtn"
+
+        class="predict-btn"
+
+    >
+
+        Upload & Predict
+
+    </button>
+
+</div>
+
+<!-- ==========================================
+Prediction Result
+========================================== -->
+
+<div class="card" id="resultSection">
+
+    <h2>
+
+        Prediction Result
+
+    </h2>
+
+    <div id="result">
+
+        Waiting for prediction...
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+Analytics Dashboard
+========================================== -->
+
+<div class="card" id="analyticsSection" style="display:none;">
+
+    <h2>
+
+        Analytics Dashboard
+
+    </h2>
+
+    <div class="analytics-cards">
+
+        <div class="analytics-card">
+
+            <h3 id="totalTransactions">0</h3>
+
+            <p>Total Transactions</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3 id="fraudCount">0</h3>
+
+            <p>Fraud</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3 id="genuineCount">0</h3>
+
+            <p>Genuine</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <h3 id="fraudRate">0%</h3>
+
+            <p>Fraud Rate</p>
+
+        </div>
+
+    </div>
+
+    <div class="charts-grid">
+
+        <div class="chart-card">
+
+            <h3>Fraud vs Genuine</h3>
+
+            <canvas id="fraudChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Risk Distribution</h3>
+
+            <canvas id="riskChart"></canvas>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="/static/js/dashboard.js"></script>
+
+</body>
+
+</html>
